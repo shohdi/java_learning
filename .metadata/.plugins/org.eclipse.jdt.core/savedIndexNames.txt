@@ -1,0 +1,21 @@
+INDEX VERSION 1.126+D:\D\ShohdiProjects\java_learning\.metadata\.plugins\org.eclipse.jdt.core
+35926252.index
+2836492132.index
+3471279518.index
+4020134784.index
+2417794837.index
+3240510484.index
+909258383.index
+1070029487.index
+1918520350.index
+3360669020.index
+2224282883.index
+2907620915.index
+2533676180.index
+1082981393.index
+3390929739.index
+3020669585.index
+1718517264.index
+516960877.index
+303121716.index
+2113791766.index

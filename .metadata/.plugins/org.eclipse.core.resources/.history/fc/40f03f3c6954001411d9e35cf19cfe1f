@@ -1,0 +1,30 @@
+import java.awt.EventQueue;
+import java.awt.event.*;
+import java.io.*;
+import javax.swing.*;
+/**
+ * A program for viewing images.
+ * @version 1.22 2007-05-21
+ * @author Cay Horstmann
+ *
+ */
+public class ImageViewer {
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable(){
+			public void run() {
+				// TODO Auto-generated method stub
+				JFrame frame = new ImageViewerFrame();
+			}
+			
+		});
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class ImageViewerFrame extends JFrame
+{
+	
+}
