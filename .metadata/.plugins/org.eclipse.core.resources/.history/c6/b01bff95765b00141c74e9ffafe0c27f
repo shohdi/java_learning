@@ -1,0 +1,132 @@
+import java.awt.EventQueue;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.*;
+import java.io.*;
+import javax.swing.*;
+
+public class GetTeacherResults {
+	public static void main(String[] args)
+	{
+		EventQueue.invokeLater(
+				new Runnable()
+				{
+					public void run()
+					{
+						GetTeacherResultsFrame frame  = new GetTeacherResultsFrame(new HttpHelperClass());
+						frame.setTitle("ارسال المدرسين");
+						frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+						frame.setVisible(true);
+					}
+				}
+						
+			);
+	}
+}
+
+
+class GetTeacherResultsFrame extends JFrame
+{
+	private static final int DEFAULT_WIDTH = 800;
+	private static final int DEFAULT_HEIGHT = 600;
+	private JPanel pane;
+	private GridBagLayout defaultLayout;
+	private JLabel lblType;
+	private JTextField txtType;
+	private JLabel lblID;
+	private JTextField txtID;
+	private JLabel lblResult;
+	private JTextField txtResult;
+	private IHttpHelper _helper;
+	private JButton sendButton;
+	
+	
+	public GetTeacherResultsFrame(IHttpHelper helper)
+	{
+		_helper = helper;
+		//init
+		this.setSize(DEFAULT_WIDTH,DEFAULT_HEIGHT);
+				
+		initializeComponents();
+		
+		
+	}
+	
+	private void initializeComponents()
+	{
+		defaultLayout = new GridBagLayout();
+		pane = new JPanel(defaultLayout);
+		this.add(pane);
+		
+		GridBagConstraints c = new GridBagConstraints();
+		c.gridheight=1;
+		c.gridwidth = 1;
+		c.gridx = 0;
+		c.gridy = 0;
+		c.ipadx = 20;
+		lblID = new JLabel("الرقم القومي");
+		pane.add(lblID,c);
+		
+		
+		c = new GridBagConstraints();
+		c.gridheight=1;
+		c.gridwidth = 1;
+		c.gridx = 1;
+		c.gridy = 0;
+		c.ipadx = 200;
+		txtID = new JTextField();
+		
+		pane.add(txtID,c);
+		
+		
+		c = new GridBagConstraints();
+		c.gridheight=1;
+		c.gridwidth = 1;
+		c.gridx = 0;
+		c.gridy = 1;
+		c.ipadx = 40;
+		lblType = new JLabel("النوع 1 لمعلم عام , 2 لمعلم فني");
+		pane.add(lblType,c);
+		
+		
+		c = new GridBagConstraints();
+		c.gridheight=1;
+		c.gridwidth = 1;
+		c.gridx = 1;
+		c.gridy = 1;
+		c.ipadx = 200;
+		txtType = new JTextField();
+		txtType.setText("1");
+		pane.add(txtType,c);
+		
+		
+		c = new GridBagConstraints();
+		c.gridheight=1;
+		c.gridwidth = 1;
+		c.gridx = 1;
+		c.gridy = 2;
+		c.ipadx = 50;
+		sendButton = new JButton("ارسال");
+		pane.add(sendButton,c);
+		
+		c = new GridBagConstraints();
+		c.gridheight=1;
+		c.gridwidth = 2;
+		c.gridx = 0;
+		c.gridy = 3;
+		c.ipadx = 400;
+		c.ipady = 400;
+		txtResult = new JTextField();
+	
+		pane.add(txtResult,c);
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,38 @@
+import java.awt.EventQueue;
+import java.awt.GridBagLayout;
+import java.awt.event.*;
+import java.io.*;
+import javax.swing.*;
+
+public class GetTeacherResults {
+	public static void main(String[] args)
+	{
+		EventQueue.invokeLater(
+				new Runnable()
+				{
+					public void run()
+					{
+						GetTeacherResultsFrame frame  = new GetTeacherResultsFrame();
+						frame.setTitle("ارسال المدرسين");
+						frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+						frame.setVisible(true);
+					}
+				}
+						
+			);
+	}
+}
+
+
+class GetTeacherResultsFrame extends JFrame
+{
+	private static final int DEFAULT_WIDTH = 800;
+	private static final int DEFAULT_HEIGHT = 600;
+	private JPanel pane;
+	private GridBagLayout defaultLayout;
+	private JLabel lblType;
+	private JTextField 
+	
+	
+	
+}
